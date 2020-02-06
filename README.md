@@ -1,5 +1,39 @@
 # PySpread
 A tiny functional python library which leverages 'Lazy Evalutation' to emulate spreadsheet functionality. 
+## Display Case
+```
+BOUNDED TWO CELL CALCULATION (Add)
+5|5||10
+
+UNBOUNDED CALCULATION (Add), (Sub)
+5 |5 |5 |5 ||20|
+60|10|10|10||30|
+  |  |  |  ||  |
+
+FUNCTION COMPOSITION
+5 |5 |5 |5 ||0 |
+60|10|10|10||0 |
+  |  |  |  ||50|
+
+Higher Order Function COMPOSITION
+5 |5 |5 |5 ||20|  |  |
+60|10|10|10||30|50|  |
+5 |5 |5 |5 ||20|  |  |
+5 |5 |5 |5 ||20|40|  |
+  |  |  |  ||  |  |90|
+
+Serializing File as: Spread.pkl
+
+Deserializing File as: Spread.pkl
+
+Pretty Printing Saved Spreadsheet
+5 |5 |5 |5 ||20|  |  |
+60|10|10|10||30|50|  |
+5 |5 |5 |5 ||20|  |  |
+5 |5 |5 |5 ||20|40|  |
+  |  |  |  ||  |  |90|
+```
+
 ## How it works
 PySpread's spreadsheet object is a 2D row, col, dictionary.
 `spr = Spread((3,6), isZeroed=True) # Defines a spreadsheet with 3 rows and 6 cols`
